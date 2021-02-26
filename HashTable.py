@@ -39,11 +39,9 @@ class HashTable:
   def insert(self, key, value):
     key_ins = self.hash_func(key)
 
-    if self.arr[key_ins] == None:
-      select_list = self.arr[key_ins] 
-      select_list.append((key, value))
-    else:
-      print('That table slot is already taken')
+    select_list = self.arr[key_ins] 
+    select_list.append((key, value))
+
 
 
   # 4️⃣ TODO: Complete the print_key_values method.
